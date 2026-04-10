@@ -1,0 +1,54 @@
+# Task Manager Application
+
+A modern, full-stack Task Manager built with Next.js, Tailwind CSS, and local persistence.
+
+## Features
+
+- **Full CRUD Support**: Create, Read, Update (Title & Status), and Delete tasks.
+- **Persistence**: Tasks are saved to a local `src/lib/tasks.json` file.
+- **Filtering**: View all tasks, or filter by Active and Completed status.
+- **Stats Dashboard**: Real-time counters for Total, Active, and Done tasks.
+- **Premium UI**: Dark-mode aesthetic with glassmorphism, smooth animations, and responsive design.
+
+## Tech Stack
+
+- **Frontend**: Next.js (React), Tailwind CSS v4, Lucide React.
+- **Backend**: Next.js API Routes (Route Handlers).
+- **Storage**: Local JSON file system.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18.x or later
+- npm or yarn
+
+### Installation
+
+1. Clone the repository (if applicable) or enter the project directory.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the Application
+
+Start the development server:
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### API Endpoints
+
+- `GET /api/tasks`: Get all tasks.
+- `POST /api/tasks`: Create a new task (Body: `{ "title": "String" }`).
+- `PATCH /api/tasks/:id`: Update a task (Body: `{ "title": "String", "completed": Boolean }`).
+- `DELETE /api/tasks/:id`: Delete a task.
+
+## Assumptions & Trade-offs
+
+- **Storage**: Used a simple JSON file for persistence to meet the "Bonus" requirement without needing a database setup (e.g., PostgreSQL/MongoDB), making it easier for the reviewer to run.
+- **Next.js 16/15**: Used the latest Next.js with App Router for a state-of-the-art framework demo.
+- **Styling**: Leveraged Tailwind CSS v4 for modern CSS-in-JS style management via standard CSS variables.
